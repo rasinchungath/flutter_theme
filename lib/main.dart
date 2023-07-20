@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:theme_demo/app_theme.dart';
+import 'package:theme_demo/theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,20 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Theme Demo',
       theme: AppThemeData.lightTheme,
-      
-      //  ThemeData(
-      //   primarySwatch: Colors.deepPurple,
-      //   brightness: Brightness.light,
-      //   //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      //   //useMaterial3: true,
-      // ),
       darkTheme: AppThemeData.darkTheme,
       //themeMode: ThemeMode.dark,
       //themeMode: ThemeMode.system,
 
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Theme Demo'),
     );
   }
 }
@@ -47,13 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
         //backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body:  Padding(
+      body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Heading', style: Theme.of(context).textTheme.headlineMedium,),
-            Text('Sub_heading' ,style: Theme.of(context).textTheme.titleMedium),
+            Text('Heading', style: Theme.of(context).textTheme.headlineMedium),
+            Text('Sub_heading', style: Theme.of(context).textTheme.titleMedium),
             Text('paragraph', style: Theme.of(context).textTheme.bodySmall),
           ],
         ),
